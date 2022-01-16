@@ -1,0 +1,30 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": ["error", "windows"], // Убираем ошибку переноса строк - удалить перед пушем!!! AppVeyor не пройдет!!!!
+        "no-unused-vars": "off", // Разрешить не используемые переменные
+        "no-console": 0, // Разрешить console.log
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+          ],
+          "import/no-extraneous-dependencies": [
+            "error",
+            {
+              "devDependencies": true
+            }
+          ]
+    }
+}
