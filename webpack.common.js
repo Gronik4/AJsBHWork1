@@ -32,8 +32,19 @@ module.exports = {
         ],
       },
       {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+      {
         test: /\.svg$/,
-        type: 'asset/resource',
+        loader: 'svg-inline-loader',
       },
     ],
   },
