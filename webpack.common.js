@@ -6,7 +6,7 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
   },
   module: {
     rules: [
@@ -44,7 +44,11 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader',
+        type: 'asset/inline',
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },

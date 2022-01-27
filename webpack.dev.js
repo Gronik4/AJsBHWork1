@@ -12,10 +12,10 @@ module.exports = merge(common, {
   // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, '/dist'),
-    open: true,
+    // contentBase: path.resolve(__dirname, '/dist'), // Внимание!! На это консоль дает ошибку!!!!
+    open: false,
     compress: true,
-    port: 8888,
+    port: 8080,
   },
 
   plugins: [
